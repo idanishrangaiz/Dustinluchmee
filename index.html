@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <noscript>
       <style type="text/css">
         [data-aos] {
@@ -81,12 +81,29 @@
           <p class="category text-white">Data Scientist</p><a class="btn btn-primary" href="resume.pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
 
 
-      <p><audio id="loop-limited" controls="controls" autoshine="" autoplay loop="" style="width: 36em; height:25px;"><source src="Vieux.mp3" type="audio/mpeg" preload="auto"/></audio><br/></p>
+      <!-- <p><audio id="loop-limited" controls="controls" autoplay="true" loop="" style="width: 36em; height:25px;"><source src="Vieux.mp3" type="audio/mpeg" preload="auto"/></audio><br/></p>
 
 <script>
 var sample = document.getElementById("loop-limited");
-sample.play();</script>
+sample.play();</script> -->
 
+
+ <!-- Html part-->
+<p class="audio-music" style="position: relative; top: 17px;"> <audio class="audio" loop autoplay="autoplay" controls id="audioelement" style="width: 36em; height:25px;">
+  <source src="Vieux.mp3" type="audio/mpeg"/>
+</audio></p>
+<button id="play-btn" onclick="PlayAudio()">PlayAudio</button>
+   
+<script>
+function PlayAudio(){
+        var audio = document.getElementById("audioelement");
+        audio.play();
+    }
+    jQuery( window ).on("load", function() {
+      jQuery('#play-btn').click();       
+});
+  </script>
+    
         </div>
       </div>
       <div class="section">
